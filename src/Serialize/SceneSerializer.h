@@ -1,11 +1,11 @@
 #pragma once
 #include <string>
 
-#include "Scene.h"
+#include "Core/Scene.h"
 
-#include "SystemManager.h"
-#include "ModelLibrary.h"
-#include "ShaderLibrary.h"
+#include "Core/SystemManager.h"
+#include "Asset/ModelLibrary.h"
+#include "Asset/ShaderLibrary.h"
 
 
 #include <entt/entity/registry.hpp>

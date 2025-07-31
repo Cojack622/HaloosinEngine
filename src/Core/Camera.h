@@ -5,6 +5,8 @@
 
 #include "math/Vector3.h"
 
+#include "CoreComponents/CoreComponents.h"
+
 #include "Serialize/Serializable.h"
 #include "Serialize/Reflector.h"
 

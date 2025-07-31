@@ -1,6 +1,6 @@
 
 #include "Shader.h"
-#include "World.h"
+#include "Core/World.h"
 
 
 //#include "Components.h"
@@ -12,7 +12,7 @@
 #include <glad/glad.h>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "Logger.h"
+#include "Logger/Logger.h"
 
 Shader::Shader(const char* vertexPath, const char* fragmentPath)
 {

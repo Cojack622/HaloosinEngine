@@ -1,13 +1,11 @@
+#include <GLAD/glad.h>
+
 #include "Render.h"
-#include "World.h"
-#include "Shader.h"
-
-#include "CoreComponents.h"
-
+#include "Asset/Shader.h"
+#include "CoreComponents/CoreComponents.h"
 
 #include "string"
-#include <glm/ext/matrix_transform.hpp>
-#include <glm/gtc/quaternion.hpp>
+
 
 
 void Renderer::RenderObject(Shader* shader, Mesh* mesh, c_Transform transform) {
@@ -19,7 +17,7 @@ void Renderer::RenderObject(Shader* shader, Mesh* mesh, c_Transform transform) {
 
     unsigned int diffuseNr = 1;
     unsigned int specularNr = 1;
-    for (unsigned int i = 0; i < mesh->textures.size(); i++)
+    for (unsigned int i = 0; i < (unsigned int)mesh->textures.size(); i++)
     {
         glActiveTexture(GL_TEXTURE0 + i); // activate proper texture unit before binding
         // retrieve texture number (the N in diffuse_textureN)
@@ -37,7 +35,7 @@ void Renderer::RenderObject(Shader* shader, Mesh* mesh, c_Transform transform) {
 
     glBindVertexArray(mesh->GetVAO());
 
-    glDrawElements(GL_TRIANGLES, mesh->indices.size(), GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_TRIANGLES, (GLsizei)mesh->indices.size(), GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);
 }
 

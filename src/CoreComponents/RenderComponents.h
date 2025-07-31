@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Asset.h"
-#include "Serializable.h"
 
-#include "ShaderReference.h"
-#include "ModelReference.h"
+#include "Serialize/Serializable.h"
+
+#include "Asset/ShaderReference.h"
+#include "Asset/ModelReference.h"
 
 
 struct c_ModelRender {

@@ -1,40 +1,18 @@
-#include <entt/entity/registry.hpp>
-#include <entt/entt.hpp>
 
-#include "glad.h"
+#include "GLAD/glad.h"
 
-#include <filesystem>
 
 #include "Game.h"
 #include "WindowManager.h"
-#include "Asset/Shader.h"
-#include "Asset/Texture.h"
-#include "Time.h"
-#include "Asset/Model.h"
 
-#include "Serialize/Serializable.h"
-
-#include <reflect/rfl.hpp>
-#include <glm/ext/matrix_transform.hpp>
-#include <glm/gtc/quaternion.hpp>
 #include <stb_image.h>
+#include "Input.h"
 
 
 
 //Temp until a proper screen is formed
 const unsigned int width = 2560, height = 1440;
 //const float zoom = 45.0f;
-
-inline glm::mat4 createModel(c_Transform transform) {
-    glm::mat4 model = glm::mat4(1.0);
-    model = glm::translate(model, transform.translate.GetBaseVector());
-    model = glm::scale(model, transform.scale.GetBaseVector());
-
-    //CHANGE LATER TO IMPLEMENT QUATS
-    model = glm::mat4_cast(glm::quat(transform.rotation.GetBaseVector())) * model;
-
-    return model;
-}
 
 
 

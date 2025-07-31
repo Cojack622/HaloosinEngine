@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Render/Texture.h"
+#include "Asset/Texture.h"
 
 #include <vector>
 #include "Asset/Shader.h"

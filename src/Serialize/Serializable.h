@@ -11,8 +11,8 @@
 #include <entt/meta/meta.hpp>
 #include <entt/core/hashed_string.hpp>
 
-#include <reflect/rfl.hpp>
-#include <reflect/rfl/json.hpp>
+#include <rfl.hpp>
+#include <rfl/json.hpp>
 
 #include "Reflector.h"
 #include "SerialPrintHelpers.h"

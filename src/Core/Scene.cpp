@@ -1,20 +1,20 @@
 #include "Scene.h"
 
-#include "Logger.h"
+#include "Logger/Logger.h"
 
-#include "LightComponents.h"
-#include "CameraComponents.h"
-#include "RenderComponents.h"
+#include "CoreComponents/LightComponents.h"
+#include "CoreComponents/CameraComponents.h"
+#include "CoreComponents/RenderComponents.h"
 #include <glm/gtc/type_ptr.hpp>
 
-
+#include <GLAD/glad.h>
 
 
 void Scene::InitializeScene() {
 	LOG_DEBUG("Scene Started!");
 
 	data.cameraBuffer = new GLBuffer(sizeof(glm::mat4), 0);
-	data.lightsBuffer = new GLBuffer(MAX_LIGHTS * sizeof(c_PointLight), 1);
+	data.lightsBuffer = new GLBuffer(/*MAX_LIGHTS * */sizeof(c_PointLight), 1);
 
 	ModelReference::SetLibrary(models.get());
 	ShaderReference::SetLibrary(shaders.get());
@@ -58,7 +58,7 @@ void Scene::UpdateScene() {
 
 	LOG_DEBUG("Sending lights to shader");
 
-	lights.Set_Direct_Light(world.registry, *mainShader);
+	//lights.Set_Direct_Light(world.registry, *mainShader);
 
 	renderObjects();
 }

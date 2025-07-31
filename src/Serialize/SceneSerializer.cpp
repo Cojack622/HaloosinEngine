@@ -1,11 +1,11 @@
 #include "SceneSerializer.h"
 
-#include <reflect/rfl.hpp>
-#include <reflect/rfl/json.hpp>
+#include <rfl.hpp>
+#include <rfl/json.hpp>
 #include "entt/meta/resolve.hpp"
 
 #include "SerialPrintHelpers.h"
-#include "CameraComponents.h"
+#include "CoreComponents/CameraComponents.h"
 #include "Serializable.h"
 #include "SerializeProcedure.h"
 
@@ -14,6 +14,8 @@
 #include <string>
 #include <regex>
 #include <unordered_map>
+
+
 /*
 * Serializes entity data in world register to a file
 * @params reg

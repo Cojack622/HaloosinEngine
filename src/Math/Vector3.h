@@ -1,7 +1,6 @@
 #pragma once
 
 #include <glm/glm.hpp>
-#include <reflectcpp/rfl.hpp>
 
 #include "Serialize/Serializable.h"
 

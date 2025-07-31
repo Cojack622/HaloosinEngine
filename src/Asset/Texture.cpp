@@ -1,5 +1,5 @@
 
-#include <glad/glad.h>
+#include <GLAD/glad.h>
 #include <stb_image.h>
 #include <string>
 #include <iostream>

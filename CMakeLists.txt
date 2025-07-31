@@ -37,14 +37,15 @@ target_sources(Haloosin PRIVATE ${SOURCES})
 target_sources(Haloosin PUBLIC ${INCLUDES})
 
 target_link_libraries(Haloosin PRIVATE
-	glad,
-	glfw3,
-	assimp,
+	glad
+	glfw3
+	assimp
 	reflectcpp::reflectcpp
 	EnTT::EnTT
 	glm::glm
 )
 
+target_compile_definitions(Haloosin PUBLIC GLFW_INCLUDE_NONE)
 
 if(MSVC)
 	target_compile_options(Haloosin PRIVATE
