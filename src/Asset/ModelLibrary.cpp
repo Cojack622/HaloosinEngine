@@ -1,4 +1,4 @@
-#include "ModelLibrary.h"
+#include "Asset/ModelLibrary.h"
 
 Model* ModelLibrary::addModel(std::string name) {
 	models.insert({ name, new Model(name) });

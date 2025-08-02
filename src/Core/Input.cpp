@@ -1,7 +1,7 @@
-#include "Input.h"
+#include "Core/Input.h"
+#include "Logger/Logger.h"
 
 #include <fstream>
-#include "Logger/Logger.h"
 
 void InputManager::loadInputFile(GLFWwindow* window, std::string path) {
     InputManager::window = window;

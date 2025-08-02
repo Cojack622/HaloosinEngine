@@ -1,8 +1,6 @@
 #pragma once
-#include <string>
 
 #include "Core/Scene.h"
-
 #include "Core/SystemManager.h"
 #include "Asset/ModelLibrary.h"
 #include "Asset/ShaderLibrary.h"
@@ -10,6 +8,8 @@
 
 #include <entt/entity/registry.hpp>
 #include <unordered_map>
+#include <string>
+
 
 class SceneSerializer {
 public:

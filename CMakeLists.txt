@@ -4,7 +4,7 @@ set(CMAKE_TOOLCHAIN_FILE "${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems
 
 project(HaloosinEngine VERSION 1.0)
 
-option(BUILD_SHARED_LIBS "Build Haloosin as a shared library" OFF)
+option(HALOOSIN_BUILD_SHARED "Build shared library" ${BUILD_SHARED_LIBS})
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -16,12 +16,16 @@ find_package(reflectcpp CONFIG REQUIRED)
 find_package(EnTT CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
 
+if(HALOOSIN_BUILD_SHARED)
+	add_library(Haloosin SHARED)
+else()
+	add_library(Haloosin STATIC)
+endif()
 
-add_library(Haloosin)
 
 file(GLOB_RECURSE INCLUDES
-	"${CMAKE_CURRENT_SOURCE_DIR}/src/**/*.h"
-	"${CMAKE_CURRENT_SOURCE_DIR}/src/**/*.hpp"
+	"${CMAKE_CURRENT_SOURCE_DIR}/include/**/*.h"
+	"${CMAKE_CURRENT_SOURCE_DIR}/include/**/*.hpp"
 
 )
 
@@ -30,16 +34,15 @@ file(GLOB_RECURSE SOURCES
 	"${CMAKE_CURRENT_SOURCE_DIR}/src/**/*.c"
 )
 
-target_include_directories(Haloosin PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
+target_include_directories(Haloosin PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include> $<INSTALL_INTERFACE:include>)
 
 
 target_sources(Haloosin PRIVATE ${SOURCES})
-target_sources(Haloosin PUBLIC ${INCLUDES})
+target_sources(Haloosin PRIVATE ${INCLUDES})
 
 target_link_libraries(Haloosin PRIVATE
-	glad
-	glfw3
-	assimp
+	glfw
+	assimp::assimp
 	reflectcpp::reflectcpp
 	EnTT::EnTT
 	glm::glm

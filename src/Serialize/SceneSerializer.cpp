@@ -1,13 +1,14 @@
-#include "SceneSerializer.h"
 
 #include <rfl.hpp>
 #include <rfl/json.hpp>
 #include "entt/meta/resolve.hpp"
 
-#include "SerialPrintHelpers.h"
+#include "Serialize/SerialPrintHelpers.h"
+
+#include "Serialize/SceneSerializer.h"
 #include "CoreComponents/CameraComponents.h"
-#include "Serializable.h"
-#include "SerializeProcedure.h"
+#include "Serialize/Serializable.h"
+#include "Serialize/SerializeProcedure.h"
 
 #include <iostream>
 #include <fstream>

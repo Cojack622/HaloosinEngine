@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <unordered_map>
 
 inline void addTab(std::string& str, int tabLevel) {
     for (int i = 0; i < tabLevel; i++) { str += "\t"; }

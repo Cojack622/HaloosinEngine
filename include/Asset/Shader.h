@@ -1,7 +1,8 @@
 #pragma once
 
 #include <glm/glm.hpp>
-#include "Texture.h"
+
+#include "Asset/Texture.h"
 #include <string>
 #include <unordered_map>
 

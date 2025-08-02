@@ -1,10 +1,10 @@
+#include "Asset/Texture.h"
 
 #include <GLAD/glad.h>
-#include <stb_image.h>
+#include <Render/stb_image.h>
 #include <string>
 #include <iostream>
 
-#include "Texture.h"
 
 
 Texture::Texture(const char* texturePath, std::string type) {

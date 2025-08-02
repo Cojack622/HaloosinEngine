@@ -1,6 +1,5 @@
-#include "WindowManager.h"
+#include "Core/WindowManager.h"
 #include <iostream>
-#include <stb_image.h>
 
 WindowManager::WindowManager(unsigned int w, unsigned int h) : SCR_WIDTH(w), SCR_HEIGHT(h) {
     glfwInit();

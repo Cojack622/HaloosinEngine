@@ -1,13 +1,12 @@
-#include "Scene.h"
+#include <glm/gtc/type_ptr.hpp>
+#include <GLAD/glad.h>
 
+#include "Core/Scene.h"
 #include "Logger/Logger.h"
-
 #include "CoreComponents/LightComponents.h"
 #include "CoreComponents/CameraComponents.h"
 #include "CoreComponents/RenderComponents.h"
-#include <glm/gtc/type_ptr.hpp>
 
-#include <GLAD/glad.h>
 
 
 void Scene::InitializeScene() {

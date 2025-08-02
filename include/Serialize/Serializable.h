@@ -1,11 +1,12 @@
 #pragma once
 ///#include "Component.h"
 
-#include <string>
-#include <map>
+#include "Serialize/Reflector.h"
+#include "Serialize/SerialPrintHelpers.h"
 
 #include <entt/entt.hpp>
 #include <entt/entity/registry.hpp>
+
 #include <entt/fwd.hpp>
 #include <entt/meta/factory.hpp>
 #include <entt/meta/meta.hpp>
@@ -14,9 +15,9 @@
 #include <rfl.hpp>
 #include <rfl/json.hpp>
 
-#include "Reflector.h"
-#include "SerialPrintHelpers.h"
 
+#include <string>
+#include <map>
 
 
 
@@ -172,13 +173,14 @@ namespace ComponentSerialize {
     */
     template<typename T>
     inline void Deserialize(entt::registry& reg, entt::entity e, std::string componentString) {
-        //I dont like passing in Registry/entity. Somewhat breaks the "one responsibility" principle. 
+        //Passing in Registry/entity sucks and breaks the "one responsibility" principle. 
         //It SHOULD return a complete component of type T, which the caller can then do whatever they want with
-        //However C++ doesn't like function pointers to template functions, So i dont know how to work around that
+        //However C++ rightfully doesn't like function pointers to template functions, So i dont know how to work around that without completely changing my serialization method (which is what i should do)
 
         std::unordered_map<std::string, std::string> componentPairs = getNameValuePair(componentString, 0);
 
         //As a component T should be default contsructorable
+        //TODO: Check that T is default constructorable?
         T* component = new T();
 
         const auto view = rfl::to_view<T>(*component);

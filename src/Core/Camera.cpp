@@ -1,8 +1,9 @@
-#include "Camera.h"
-
+#include "Core/Camera.h"
 #include "CoreComponents/CoreComponents.h"
-#include <glm/gtc/matrix_transform.hpp>
 #include "Math/VectorMath.h"
+
+#include <glm/gtc/matrix_transform.hpp>
+
 
 Camera::Camera(Camera_Type type, float zoom, float aspectRatio, float near, float far) {
 	this->zoom = zoom;
@@ -31,10 +32,10 @@ void Camera::Update_View(c_Transform transform) {
 	front.x(cos(glm::radians(transform.rotation.y())) * cos(glm::radians(transform.rotation.x())));
 	front.y(sin(glm::radians(transform.rotation.x())));
 	front.z(sin(glm::radians(transform.rotation.y())) * cos(glm::radians(transform.rotation.x())));
-	Front = Tripe_Math::normalize(front);
+	Front = Haloosin_Math::normalize(front);
 
-	Vector3 Right = Tripe_Math::normalize(Tripe_Math::cross(Front, World_Up));
-	Up = Tripe_Math::normalize(Tripe_Math::cross(Right, Front));
+	Vector3 Right = Haloosin_Math::normalize(Haloosin_Math::cross(Front, World_Up));
+	Up = Haloosin_Math::normalize(Haloosin_Math::cross(Right, Front));
 
 	viewMatrix = glm::lookAt(transform.translate.GetBaseVector(), (transform.translate + Front).GetBaseVector(), Up.GetBaseVector());
 }

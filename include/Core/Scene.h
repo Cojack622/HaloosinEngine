@@ -1,15 +1,15 @@
 #pragma once
 
-#include "Camera.h"
-#include "Render/GLBuffer.h"
+#include "Core/Camera.h"
+#include "Core/SystemManager.h"
 
+#include "Render/GLBuffer.h"
 #include "Render/Render.h"
 
 #include "Asset/ModelLibrary.h"
 #include "Asset/ShaderLibrary.h"
 
 
-#include "SystemManager.h"
 
 
 struct SceneData {

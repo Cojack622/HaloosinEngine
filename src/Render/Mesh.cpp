@@ -1,6 +1,6 @@
-#include "Mesh.h"
+#include "Render/Mesh.h"
 
-#include "GLAD/glad.h"
+#include <GLAD/glad.h>
 
 Mesh::Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures) {
     this->vertices = vertices;

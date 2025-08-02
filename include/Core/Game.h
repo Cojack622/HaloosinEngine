@@ -1,12 +1,8 @@
 #pragma once
 
-
-#include <glm/glm.hpp>
-#include "Time.h"
-
-
 #include "Serialize/SceneSerializer.h"
-#include "Scene.h"
+#include "Core/Scene.h"
+#include "Core/Time.h"
 
 class Game {
 private:

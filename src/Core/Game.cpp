@@ -1,12 +1,12 @@
+#include "Core/Game.h"
 
 #include "GLAD/glad.h"
 
 
-#include "Game.h"
-#include "WindowManager.h"
+#include "Core/WindowManager.h"
 
-#include <stb_image.h>
-#include "Input.h"
+#include <Render/stb_image.h>
+#include "Core/Input.h"
 
 
 

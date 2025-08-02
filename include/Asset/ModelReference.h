@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Serialize/Serializable.h"
-#include "Model.h"
-#include "ModelLibrary.h"
+#include "Asset/Model.h"
+#include "Asset/ModelLibrary.h"
 
 /**
 Designated Reference to existing shader in scene

@@ -1,9 +1,10 @@
 #pragma once
 
-#include <list>
+#include "Core/World.h"
+#include "Core/Procedure.h"
 
-#include "World.h"
-#include "Procedure.h"
+#include <vector>
+
 
 class SystemManager {
 

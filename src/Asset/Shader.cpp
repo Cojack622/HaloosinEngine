@@ -1,18 +1,14 @@
+#include "Asset/Shader.h"
 
-#include "Shader.h"
-#include "Core/World.h"
+#include <glad/glad.h>
 
-
-//#include "Components.h"
+#include "Logger/Logger.h"
 
 #include <fstream>
 #include <sstream>
 #include <iostream>
-
-#include <glad/glad.h>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "Logger/Logger.h"
 
 Shader::Shader(const char* vertexPath, const char* fragmentPath)
 {
