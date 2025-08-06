@@ -3,12 +3,12 @@
 
 #include <glm/glm.hpp>
 
-#include "math/Vector3.h"
+#include "../Math/Vector3.h"
 
-#include "CoreComponents/CoreComponents.h"
+#include "../CoreComponents/CoreComponents.h"
 
-#include "Serialize/Serializable.h"
-#include "Serialize/Reflector.h"
+#include "../Serialize/Serializable.h"
+#include "../Serialize/Reflector.h"
 
 enum class Camera_Type {
 	PERSPECTIVE,

@@ -1,4 +1,7 @@
 #include "Logger/Logger.h"
+#include "Windows.h"
+#include <iostream>
+
 
 bool debug = false;
 

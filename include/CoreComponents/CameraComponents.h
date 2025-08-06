@@ -1,6 +1,6 @@
 #pragma once
-#include "Core/Camera.h"
-#include "Serialize/Serializable.h"
+#include "../Core/Camera.h"
+#include "../Serialize/Serializable.h"
 
 
 struct c_Camera {

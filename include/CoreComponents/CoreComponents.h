@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Serialize/Serializable.h"
+#include "../Serialize/Serializable.h"
 
 
-#include "Math/Vector3.h"
+#include "../Math/Vector3.h"
 
 
 struct c_Transform {

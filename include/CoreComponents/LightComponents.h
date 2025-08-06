@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Serialize/Serializable.h"
-#include "Math/Vector3.h"
+#include "../Serialize/Serializable.h"
+#include "../Math/Vector3.h"
 
 
 struct c_DirectionalLight {

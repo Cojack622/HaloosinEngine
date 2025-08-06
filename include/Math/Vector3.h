@@ -2,7 +2,7 @@
 
 #include <glm/glm.hpp>
 
-#include "Serialize/Serializable.h"
+#include "../Serialize/Serializable.h"
 
 /*Wrapper class for glm::vec3
 Made to replicate function of glm::vec3 with concrete type so serializer can easily read it

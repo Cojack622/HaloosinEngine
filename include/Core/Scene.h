@@ -1,13 +1,13 @@
 #pragma once
 
-#include "Core/Camera.h"
-#include "Core/SystemManager.h"
+#include "../Core/Camera.h"
+#include "../Core/SystemManager.h"
 
-#include "Render/GLBuffer.h"
-#include "Render/Render.h"
+#include "../Render/GLBuffer.h"
+#include "../Render/Render.h"
 
-#include "Asset/ModelLibrary.h"
-#include "Asset/ShaderLibrary.h"
+#include "../Asset/ModelLibrary.h"
+#include "../Asset/ShaderLibrary.h"
 
 
 

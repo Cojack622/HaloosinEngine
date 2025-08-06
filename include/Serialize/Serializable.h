@@ -1,8 +1,8 @@
 #pragma once
 ///#include "Component.h"
 
-#include "Serialize/Reflector.h"
-#include "Serialize/SerialPrintHelpers.h"
+#include "../Serialize/Reflector.h"
+#include "../Serialize/SerialPrintHelpers.h"
 
 #include <entt/entt.hpp>
 #include <entt/entity/registry.hpp>
@@ -14,7 +14,6 @@
 
 #include <rfl.hpp>
 #include <rfl/json.hpp>
-
 
 #include <string>
 #include <map>
@@ -267,46 +266,7 @@ namespace ComponentSerialize {
         delete(component);
     }
 
-
 }
-
-
-
-
-
-// 
-// 
-//private:
-//
-//	std::vector<float> SerializeVector(std::string vectorString, int dim) {
-//		const char* cStr = vectorString.c_str();
-//
-//		std::vector<float> vector;
-//		//Starts of 4 to account for vec3
-//		int startIndex = 4;
-//		int endIndex = 4;
-//
-//		int vectorNumber = 1;
-//		for (int i = startIndex; i < vectorString.length(); i++) {
-//			if (cStr[i] == ',' || cStr[i] == ')') {
-//				endIndex = i;
-//
-//				float number = std::stof(vectorString.substr(startIndex, endIndex - startIndex));
-//				vector.push_back(number);
-//
-//				startIndex = i + 1;
-//			}
-//		}
-//
-//		return vector;
-//	}
-//
-//	//Change this to utilisze memory blocks 
-//	glm::vec3 SerializeVec3(std::string vectorString) {
-//		std::vector<float> values = SerializeVector(vectorString, 3);
-//
-//		return glm::vec3(values[0], values[1], values[2]);
-//	}
 
 
 

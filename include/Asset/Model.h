@@ -3,12 +3,12 @@
 #include <vector>
 #include <iostream>
 
-#include "Asset/Shader.h"
+#include "../Asset/Shader.h"
 
 #include <assimp/scene.h>
 #include <assimp/Importer.hpp>
 #include <assimp/postprocess.h>
-#include "Render/Mesh.h"
+#include "../Render/Mesh.h"
 
 
 //Probably should change this to load from file

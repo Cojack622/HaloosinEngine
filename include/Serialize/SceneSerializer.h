@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Core/Scene.h"
-#include "Core/SystemManager.h"
-#include "Asset/ModelLibrary.h"
-#include "Asset/ShaderLibrary.h"
+#include "../Core/Scene.h"
+#include "../Core/SystemManager.h"
+#include "../Asset/ModelLibrary.h"
+#include "../Asset/ShaderLibrary.h"
 
 
 #include <entt/entity/registry.hpp>

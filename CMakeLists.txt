@@ -10,18 +10,17 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 
+if(WIN32)
+	set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+endif()
+
 find_package(glfw3 CONFIG REQUIRED)
 find_package(assimp CONFIG REQUIRED)
 find_package(reflectcpp CONFIG REQUIRED)
 find_package(EnTT CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
 
-if(HALOOSIN_BUILD_SHARED)
-	add_library(Haloosin SHARED)
-else()
-	add_library(Haloosin STATIC)
-endif()
-
+add_executable(Haloosin)
 
 file(GLOB_RECURSE INCLUDES
 	"${CMAKE_CURRENT_SOURCE_DIR}/include/**/*.h"
@@ -38,7 +37,7 @@ target_include_directories(Haloosin PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOU
 
 
 target_sources(Haloosin PRIVATE ${SOURCES})
-target_sources(Haloosin PRIVATE ${INCLUDES})
+target_sources(Haloosin PUBLIC ${INCLUDES})
 
 target_link_libraries(Haloosin PRIVATE
 	glfw

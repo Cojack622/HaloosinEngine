@@ -2,7 +2,7 @@
 
 #include <glm/glm.hpp>
 
-#include "Asset/Texture.h"
+#include "../Asset/Texture.h"
 #include <string>
 #include <unordered_map>
 

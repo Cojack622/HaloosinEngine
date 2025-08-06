@@ -1,5 +1,5 @@
 #pragma once
-#include "Vector3.h"
+#include "../Math/Vector3.h"
 namespace Haloosin_Math {
     // Cross product returns a Vector3 perpendicular to the two input vectors
     inline Vector3 cross(Vector3 a, Vector3 b) {

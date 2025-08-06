@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Core/World.h"
-#include "Core/Procedure.h"
+#include "../Core/World.h"
+#include "../Core/Procedure.h"
 
 #include <vector>
 

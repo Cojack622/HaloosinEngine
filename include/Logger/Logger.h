@@ -1,8 +1,5 @@
 #pragma once
 
-#include <iostream>
-#include <Windows.h>
-
 #define DEBUG_COLOR 2
 #define ERROR_COLOR 3
 

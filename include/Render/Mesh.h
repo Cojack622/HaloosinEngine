@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Asset/Texture.h"
+#include "../Asset/Texture.h"
 
 #include <vector>
-#include "Asset/Shader.h"
+#include "../Asset/Shader.h"
 
 
 

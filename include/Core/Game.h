@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Serialize/SceneSerializer.h"
-#include "Core/Scene.h"
-#include "Core/Time.h"
+#include "../Serialize/SceneSerializer.h"
+#include "../Core/Scene.h"
+#include "../Core/Time.h"
 
 class Game {
 private:

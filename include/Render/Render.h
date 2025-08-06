@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Render/Mesh.h"
-#include "Asset/Shader.h"
-#include "CoreComponents/CoreComponents.h"
+#include "../Render/Mesh.h"
+#include "../Asset/Shader.h"
+#include "../CoreComponents/CoreComponents.h"
 
 enum Render_Mode {
 	WIREFRAME,

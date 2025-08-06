@@ -1,7 +1,7 @@
 #pragma once
 
 #include <GLFW/glfw3.h>
-#include "GLAD/glad.h"
+#include "../GLAD/glad.h"
 
 class WindowManager {
 public:
